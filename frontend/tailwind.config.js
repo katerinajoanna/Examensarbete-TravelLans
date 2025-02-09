@@ -8,15 +8,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        'bgPrimary': {
-          0: '#333E89',   // 0%
-          50: '#202756',   // 50%
-          75: '#171B3D',   // 75%
-          100: '#0D1023',  // 100%
-        }
-      },
-      backgroundImage: {
-        'gradient-primary': 'linear-gradient(90deg, #333E89 0%, #202756 50%, #171B3D 75%, #0D1023 100%)',
+        bgLine: '#A8C33F',            // Linie oddzielające, tło headera, stroke
+        textPrimary: '#031BBD',       // Główne teksty (np. nagłówki)
+        textSecondary: '#E5A000',     // Podkreślenia, teksty dodatkowe
+        overlay: '#171B3D',           // Pasek przezroczysty na zdjęciu z nazwami kontynentów
+        bgButton: '#2B336E',          // Tło przycisków
+        bgNoteLight: '#D8E1B6',       // Tło jasne dla wpisywania notatek/opisów
+        bgNoteDark: '#F2F4EA',        // Alternatywne tło dla notatek/opisów
+        textMuted: '#F0EFE8',         // Kolor tekstu na jasnych tłach
       },
     },
   },
