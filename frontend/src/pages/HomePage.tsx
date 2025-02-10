@@ -68,6 +68,7 @@ function HomePage() {
                     <div className="h-[336px] bg-[rgba(0,0,0,0.39)] backdrop-blur-md rounded-[15px] shadow-[0px_4px_4px_rgba(0,0,0,0.25)] p-6">Content 5</div>
                     <div className="h-[336px] bg-[rgba(0,0,0,0.39)] backdrop-blur-md rounded-[15px] shadow-[0px_4px_4px_rgba(0,0,0,0.25)] p-6">Content 6</div>
                 </div>
+                <div className="w-full h-[0.5px] bg-bgLine my-8"></div>
             </main>
 
             {/* Footer przyklejony na dole */}
