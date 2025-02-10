@@ -7,7 +7,11 @@ import svgr from 'vite-plugin-svgr';
 export default defineConfig({
   plugins: [
     react(),
-    svgr(),
+    svgr(
+      {
+        exclude: './src/assets/**',  // Wyklucz folder assets z przekształcania SVG na komponenty React
+      }
+    ),
   ],
   resolve: {
     alias: {
