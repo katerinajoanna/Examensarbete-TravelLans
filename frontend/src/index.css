@@ -16,5 +16,5 @@ html {
     background: linear-gradient(90deg, #333E89 0%, #202756 50%, #171B3D 75%, #0D1023 100%);
     height: 100vh;
     background-size: cover;
-    /* background-attachment: fixed;  ---statyczne tlo--- */
+    /* background-attachment: fixed;  ---statyczne tlo---  */
 }
