@@ -17,8 +17,22 @@ export default {
         bgNoteDark: '#F2F4EA',        // Alternatywne tło dla notatek/opisów
         textMuted: '#F0EFE8',         // Kolor tekstu na jasnych tłach
       },
+      fontFamily: {
+        robotoSerif: ['Roboto Serif', 'serif'],
+        robotoFlex: ['Roboto Flex', 'sans-serif'],
+      },
+    },
+    animation: {
+      slideIn: 'slideIn 1s ease-in-out', // Dodaj niestandardową animację
+    },
+    keyframes: {
+      slideIn: {
+        '0%': { transform: 'translateX(-100%)' },
+        '100%': { transform: 'translateX(0)' },
+      },
     },
   },
+
   plugins: [],
 }
 
