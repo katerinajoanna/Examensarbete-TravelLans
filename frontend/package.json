@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fontsource/roboto-flex": "^5.1.1",
+    "@fontsource/roboto-serif": "^5.1.2",
     "@types/react-router-dom": "^5.3.3",
     "axios": "^1.7.9",
     "react": "^18.3.1",

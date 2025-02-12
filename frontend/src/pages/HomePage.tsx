@@ -49,9 +49,9 @@ function HomePage() {
 
             {/* Main, który zajmuje resztę przestrzeni */}
             <main className="flex-1 overflow-y-auto p-4">
-                <h1 className="text-center text-3xl text-textSecondary mb-4">Welcome to our website!</h1>
+                <h1 className="font-robotoSerif text-center text-3xl text-textSecondary mb-4 font-extrabold italic drop-shadow-[0_0_10px_#000000]">Welcome to our website!</h1>
 
-                <div className="flex justify-center items-center max-w-[800px] m-7 w-full h-[330px] bg-[rgba(0,0,0,0.39)] backdrop-blur-md rounded-[15px] shadow-[0px_4px_4px_rgba(0,0,0,0.25)] p-14 mx-auto">
+                <div className="font-robotoSerif flex justify-center items-center max-w-[800px] m-7 w-full h-[330px] bg-[rgba(0,0,0,0.39)] backdrop-blur-md rounded-[15px] shadow-[0px_4px_4px_rgba(0,0,0,0.25)] p-14 mx-auto">
                     <p className="text-textMuted text-left tracking-wide leading-relaxed">
                         Are you seeking travel inspiration or dreaming of exploring the most breathtaking places on Earth, all from the comfort of your own home? You've come to the right place! Here, you’ll discover the wonders of nature like never before.
                     </p>
