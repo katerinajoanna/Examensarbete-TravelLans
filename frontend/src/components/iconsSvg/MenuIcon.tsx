@@ -7,8 +7,7 @@ function MenuIcon() {
             viewBox="0 0 24 24"
             strokeWidth="1.2"
             stroke="#031BBD"
-            className="w-6, h-6"
-            transform="scale(-1, 1)" // Obrót lustrzany w poziomie
+            className="w-6 sm:w-7 md:w-8 lg:w-9 cursor-pointer transform scale-x-[-1]"
             onClick={() => console.log("Kliknięto ikonę!")}
         >
             <path
