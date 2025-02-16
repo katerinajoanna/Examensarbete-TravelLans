@@ -18,7 +18,7 @@ export default {
         textMuted: '#F0EFE8',         // Kolor tekstu na jasnych tłach
       },
       boxShadow: {
-        imgShadow: '-2px 2px 7px 2px rgba(169, 166, 146, 0.5)', // images shadow
+        imgShadow: '-6px 6px 15px rgba(169, 166, 146, 0.45)', // images shadow
       },
       fontFamily: {
         robotoSerif: ['Roboto Serif', 'serif'],

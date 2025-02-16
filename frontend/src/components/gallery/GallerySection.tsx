@@ -1,19 +1,25 @@
 import GalleryCard from "./GalleryCard";
+import africa from "../../assets/images/Canyonlands-National-Park-Utah.jpg";
+import asia from "../../assets/images/Niagara-cud-natury-w-nocy-.jpg";
+import europe from "../../assets/images/istockphoto.jpg";
+import northAmerica from "../../assets/images/poziomewod3.jpg";
+import southAmerica from "../../assets/images/poziomywod2.jpeg";
+import australia from "../../assets/images/zhangjiajie-d485479.jpg";
 
 const GallerySection: React.FC = () => {
     return (
-        <section className="max-w-7xl mx-auto p-3">
-            <h2 className="text-textSecondary text-center text-3xl font-robotoSans italic font-bold tracking-wider mb-8">
+        <section className='max-w-7xl mx-auto p-3'>
+            <h2 className='text-textSecondary text-center text-5xl font-robotoSans italic font-bold tracking-wider text-stroke mb-12'>
                 Galleries
             </h2>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <GalleryCard title="Africa" />
-                <GalleryCard title="Asia" />
-                <GalleryCard title="Europe" />
-                <GalleryCard title="North America" />
-                <GalleryCard title="South America" />
-                <GalleryCard title="Australia" />
+            <div className='grid grid-cols-1 font-robotoFlex tracking-[0.05em] stroke-continent sm:grid-cols-2 lg:grid-cols-3 gap-6 text-2xl '>
+                <GalleryCard title='Africa' image={africa} />
+                <GalleryCard title='Asia' image={asia} />
+                <GalleryCard title='Europe' image={europe} />
+                <GalleryCard title='North America' image={northAmerica} />
+                <GalleryCard title='South America' image={southAmerica} />
+                <GalleryCard title='Australia' image={australia} />
             </div>
         </section>
     );

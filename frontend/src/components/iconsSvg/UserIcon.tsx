@@ -11,6 +11,7 @@ function UserIcon() {
             strokeWidth="1.2"
             strokeLinecap="round"
             strokeLinejoin="round"
+            className="w-6 sm:w-7 md:w-8 cursor-pointer"
             onClick={() => console.log("Kliknięto user!")}
         >
             <path

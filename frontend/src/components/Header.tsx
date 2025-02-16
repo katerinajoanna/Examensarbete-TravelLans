@@ -1,32 +1,34 @@
+
 import logo from '../assets/logo1.svg';
 import Terra from '../assets/terralens.svg';
 import MenuIcon from './iconsSvg/MenuIcon';
-import UserIcon from './iconsSvg/userIcon';
+import UserIcon from './iconsSvg/UserIcon';
 
 function Header() {
     return (
-        <div className="sticky top-0 left-0 bg-lime-400 w-full flex justify-between items-center p-2 shadow-md z-10">
-            <div className="flex items-center">
-                {/* Logo image */}
+        <header className='sticky top-0 left-0 bg-lime-400 w-full flex items-center justify-between p-3 sm:p-4 shadow-md z-50'>
+
+            {/* Lewa strona - Logo i napis */}
+            <div className='flex items-center gap-2 sm:gap-4'>
                 <img
                     src={logo}
-                    alt="logo"
-                    className="p-1 animate-slideIn delay-100 max-w-full object-contain w-12 sm:w-14 md:w-16 lg:w-18"
+                    alt='logo'
+                    className='w-10 sm:w-12 md:w-14 lg:w-16 object-contain'
                 />
-                {/* Terra image */}
                 <img
                     src={Terra}
-                    alt="Terra"
-                    className="p-1 animate-slideIn delay-200 max-w-full object-contain w-48 sm:w-56 md:w-64 lg:w-72"
+                    alt='Terra'
+                    className='w-36 sm:w-44 md:w-52 lg:w-60 object-contain'
                 />
-
-            </div>
-            <div className='flex items-end mr-4 gap-4'>
-
-                <UserIcon /> <MenuIcon />
             </div>
 
-        </div>
+            {/* Prawa strona - Ikony użytkownika i menu */}
+            <div className='flex items-center gap-3 sm:gap-4 mr-2'>
+                <UserIcon />
+                <MenuIcon />
+            </div>
+
+        </header>
     );
 }
 
