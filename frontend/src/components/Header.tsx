@@ -1,6 +1,7 @@
 import logo from '../assets/logo1.svg';
 import Terra from '../assets/terralens.svg';
 import MenuIcon from './iconsSvg/MenuIcon';
+import UserIcon from './iconsSvg/userIcon';
 
 function Header() {
     return (
@@ -21,7 +22,8 @@ function Header() {
 
             </div>
             <div className='flex items-end mr-4 gap-4'>
-                <MenuIcon />
+
+                <UserIcon /> <MenuIcon />
             </div>
 
         </div>

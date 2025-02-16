@@ -17,6 +17,9 @@ export default {
         bgNoteDark: '#F2F4EA',        // Alternatywne tło dla notatek/opisów
         textMuted: '#F0EFE8',         // Kolor tekstu na jasnych tłach
       },
+      boxShadow: {
+        imgShadow: '-2px 2px 7px 2px rgba(169, 166, 146, 0.5)', // images shadow
+      },
       fontFamily: {
         robotoSerif: ['Roboto Serif', 'serif'],
         robotoFlex: ['Roboto Flex', 'sans-serif'],
