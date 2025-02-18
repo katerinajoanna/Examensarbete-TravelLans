@@ -5,22 +5,19 @@ import Twitter from "./iconsSvg/Twitter";
 
 const Footer: React.FC = () => {
     return (
-        <footer className='w-full bg-bgPrimary text-bgLine p-5'>
-            <div className='flex flex-col sm:flex-row justify-between items-center gap-6 mx-5'>
-                {/* Copyright i rok */}
-                <div className='flex items-center gap-0.5 font-robotoFlex italic'>
-                    <p className='text-[#ADDA4A]'>&copy;</p>
-                    <p className='text-[#ADDA4A]'>2025 Trawel Lans</p>
+        <footer className='w-full bg-bgPrimary text-bgLine  text-base md:text-lg lg:text-2xl p-5'>
+            <div className='flex flex-col sm:flex-row justify-between items-center gap-[.1rem] mx-8'>
+
+                <div className='flex items-center text gap-0.5 font-robotoFlex italic p-1'>
+                    <p className='text-[#ADDA4A]'>&copy; 2025 Trawel Lans</p>
                 </div>
 
-                {/* Email */}
-                <div className='flex items-center gap-2'>
+                <div className='flex items-center gap-2 p-1'>
                     <Envelope />
-                    <p className='text-[#ADDA4A] italic'>lanstravel@trawel.com</p>
+                    <p className='text-bgLine italic '>lanstravel@trawel.com</p>
                 </div>
 
-                {/* Ikony społecznościowe */}
-                <div className='flex gap-4'>
+                <div className='flex gap-3 p-1'>
                     <Twitter />
                     <Facebook />
                     <Instagram />
@@ -31,5 +28,3 @@ const Footer: React.FC = () => {
 };
 
 export default Footer;
-
-

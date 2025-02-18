@@ -3,8 +3,7 @@ function Facebook() {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
+            className="w-5 h-5 sm:w-5 sm:h-6 md:w-6 md:h-6 lg:w-6 lg:h-7"
             viewBox="0 0 24 24"
             fill="none"
             stroke="#A8C33F"

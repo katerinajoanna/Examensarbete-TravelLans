@@ -38,6 +38,8 @@
 
 import { HeroSectionProps } from '../types/hero'
 import video1 from '../assets/videos/medium.webm';
+import SearchHome from './SearchHome';
+
 
 const HeroSection: React.FC<HeroSectionProps> = ({ title, description }) => {
     return (
@@ -66,9 +68,12 @@ const HeroSection: React.FC<HeroSectionProps> = ({ title, description }) => {
                         {description}
                     </p>
                 </div>
-                <div>
-                    <h5 className='text-white'>cos tam</h5>
-                </div>
+
+                <SearchHome
+                    label=""
+                    placeholder="Type a place or continent"
+                />
+
             </div>
         </section >
     );
