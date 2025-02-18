@@ -6,7 +6,7 @@ import Twitter from "./iconsSvg/Twitter";
 const Footer: React.FC = () => {
     return (
         <footer className='w-full bg-bgPrimary text-bgLine p-5'>
-            <div className='flex flex-col sm:flex-row justify-between items-center gap-6'>
+            <div className='flex flex-col sm:flex-row justify-between items-center gap-6 mx-5'>
                 {/* Copyright i rok */}
                 <div className='flex items-center gap-0.5 font-robotoFlex italic'>
                     <p className='text-[#ADDA4A]'>&copy;</p>
