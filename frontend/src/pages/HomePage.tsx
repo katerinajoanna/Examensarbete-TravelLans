@@ -13,7 +13,7 @@ const HomePage: React.FC = () => {
                     title="Welcome to our website!"
                     description="Are you seeking travel inspiration or dreaming of exploring the most breathtaking places on Earth, all from the comfort of your own home? You've come to the right place!"
                 />
-                <div className='w-full h-[0.5px] bg-bgLine my-12'></div>
+                <div className='w-full h-[0.5px] bg-bgLine my-12 mb-5 md:mb-8'></div>
                 <GallerySection />
                 <div className='w-full h-[0.5px] bg-bgLine mt-12'></div>
             </main>
