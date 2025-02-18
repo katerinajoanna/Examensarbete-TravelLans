@@ -19,6 +19,7 @@ export default {
       },
       boxShadow: {
         imgShadow: '-6px 6px 15px rgba(169, 166, 146, 0.45)', // images shadow
+        searchShadow: '0px 4px 15px rgba(198, 195, 63, 0.25)',   //search shadow
       },
       fontFamily: {
         robotoSerif: ['Roboto Serif', 'serif'],
