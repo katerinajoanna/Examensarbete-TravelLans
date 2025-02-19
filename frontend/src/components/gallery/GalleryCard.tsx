@@ -2,7 +2,7 @@ import { GalleryCardProps } from "../../types/galleryCard";
 
 const GalleryCard: React.FC<GalleryCardProps> = ({ title, image }) => {
     return (
-        <div className='relative w-full max-w-[650px] aspect-[13/8] rounded-md flex items-end overflow-hidden mx-auto  shadow-imgShadow'>
+        <div className='relative w-full max-w-[650px] aspect-[13/8] rounded-md flex items-end overflow-hidden mx-auto border border-bgLine border-opacity-40 shadow-imgShadow'>
             {/* Obrazek */}
             <img
                 src={image}

@@ -16,10 +16,11 @@ export default {
         bgNoteLight: '#D8E1B6',       // Tło jasne dla wpisywania notatek/opisów
         bgNoteDark: '#F2F4EA',        // Alternatywne tło dla notatek/opisów
         textMuted: '#F0EFE8',         // Kolor tekstu na jasnych tłach
+
       },
       boxShadow: {
         imgShadow: '-6px 6px 15px rgba(169, 166, 146, 0.45)', // images shadow
-        searchShadow: '0px 4px 15px rgba(198, 195, 63, 0.25)',   //search shadow
+        searchShadow: '0px 4px 10px rgba(198, 195, 63, 0.25)',   //search shadow
       },
       fontFamily: {
         robotoSerif: ['Roboto Serif', 'serif'],

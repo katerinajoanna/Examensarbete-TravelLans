@@ -8,7 +8,9 @@ function SearchGlass() {
             viewBox="0 0 24 24"
             strokeWidth="1.5"
             stroke="currentColor"
-            className="size-6 opacity-80">
+            className="size-6 opacity-70"
+            onClick={() => console.log("Kliknięto search")}
+        >
             <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
