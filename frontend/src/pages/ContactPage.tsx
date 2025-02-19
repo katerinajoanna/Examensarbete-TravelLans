@@ -1,9 +1,10 @@
+import Header from "../components/Header";
 
 
-function ContactPage() {
+const ContactPage = () => {
     return (
         <div>
-            <h1>Contact</h1>
+            <Header title='Contact' />
         </div>
     );
 }

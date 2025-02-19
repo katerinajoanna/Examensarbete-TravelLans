@@ -63,7 +63,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ title, description }) => {
                     {title}
                 </h1>
 
-                <div className='bg-[#090909] bg-opacity-40 flex justify-center items-center p-4 sm:p-6 md:p-8 rounded-md max-w-[90%] sm:max-w-[80%] md:max-w-[80%] lg:max-w-[90%] xl:max-w-[80%]'>
+                <div className='bg-[#181a1e] bg-opacity-40 flex justify-center items-center p-4 sm:p-6 md:p-8 rounded-md searchShadow max-w-11/12 sm:max-w-11/12 md:max-w-11/12 lg:max-w-11/12 xl:max-w-5xl'>
                     <p className='text-xs sm:text-base md:text-1xl lg:text-2xl text-textMuted leading-6 md:leading-[3rem] lg:leading-[3rem] font-robotoSerif italic tracking-wide'>
                         {description}
                     </p>

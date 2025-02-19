@@ -1,10 +1,11 @@
+import Header from "../components/Header";
 
 
-function MyPage() {
+const MyPage = () => {
 
     return (
         <div className="p-4">
-            <h1>My page</h1>
+            <Header title='My page' />
 
         </div>
     );
