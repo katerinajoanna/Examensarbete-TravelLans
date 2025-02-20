@@ -15,7 +15,7 @@ export default {
         bgButton: '#2B336E',    // Tło przycisków
         bgNoteLight: '#D8E1B6',       // Tło jasne dla wpisywania notatek/opisów
         bgNoteDark: '#F2F4EA',        // Alternatywne tło dla notatek/opisów
-        textMuted: '#F0EFE8',         // Kolor tekstu na jasnych tłach
+        textMuted: '#F0EFE8',        // Kolor tekstu na jasnych tłach
 
       },
       boxShadow: {
