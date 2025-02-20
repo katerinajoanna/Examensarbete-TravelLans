@@ -4,7 +4,7 @@ import Header from "../components/Header";
 const MyPage = () => {
 
     return (
-        <div className="p-4">
+        <div>
             <Header title='My page' />
 
         </div>
