@@ -25,7 +25,7 @@ const Header: React.FC<HeaderProps> = ({ title }) => {
                     <img
                         src={Terra}
                         alt="Terra"
-                        className='w-36 sm:w-44 md:w-52 lg:w-60 object-contain'
+                        className='w-36 sm:w-44 md:w-[16rem] lg:w-[18rem] object-contain'
                     />
                 )}
             </div>
