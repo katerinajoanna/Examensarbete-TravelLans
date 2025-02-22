@@ -19,7 +19,7 @@ const GallerySection: React.FC = () => {
                 <GalleryCard title='Europe' image={europe} />
                 <GalleryCard title='North America' image={northAmerica} />
                 <GalleryCard title='South America' image={southAmerica} />
-                <GalleryCard title='Australia' image={australia} />
+                <GalleryCard title='Oceania' image={australia} />
             </div>
         </section>
     );
