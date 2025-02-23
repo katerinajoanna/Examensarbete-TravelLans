@@ -1,5 +1,6 @@
+import { IconProps } from "../../types/iconProps";
 
-function MenuIcon() {
+function MenuIcon({ onClick }: IconProps) {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -8,7 +9,7 @@ function MenuIcon() {
             strokeWidth="1.2"
             stroke="#031BBD"
             className="w-6 sm:w-7 md:w-8 lg:w-9 cursor-pointer transform scale-x-[-1]"
-            onClick={() => console.log("Kliknięto ikonę!")}
+            onClick={onClick}
         >
             <path
                 strokeLinecap="round"
