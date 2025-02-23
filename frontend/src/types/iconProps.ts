@@ -1,3 +1,3 @@
 export interface IconProps {
-    onClick: () => void; // Określenie typu dla funkcji onClick
+    onClick: () => void; // typbestämning för funktion onClick
 }

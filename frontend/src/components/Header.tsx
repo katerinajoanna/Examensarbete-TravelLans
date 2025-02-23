@@ -6,7 +6,7 @@ import MenuIcon from './iconsSvg/MenuIcon';
 import UserIcon from './iconsSvg/UserIcon';
 import { HeaderProps } from '../types/headerProps';
 import { useState } from 'react';
-import Menu from './Menu'; // Zaimportuj komponent Menu
+import Menu from './Menu';
 
 const Header: React.FC<HeaderProps> = ({ title }) => {
     const location = useLocation();
@@ -17,7 +17,7 @@ const Header: React.FC<HeaderProps> = ({ title }) => {
         <>
             <header className='sticky top-0 left-0 bg-lime-400 w-full flex items-center justify-between p-3 sm:p-4 shadow-md z-50'>
 
-                {/* Lewa strona - Logo i ewentualnie Terra */}
+                {/* Logo i  Terra */}
                 <div className='flex items-center gap-2 sm:gap-4'>
                     <img
                         src={logo}
@@ -33,23 +33,21 @@ const Header: React.FC<HeaderProps> = ({ title }) => {
                     )}
                 </div>
 
-                {/* Środkowa część - Nazwa strony (jeśli nie Home) */}
                 {!isHome && (
                     <div className='absolute left-1/2 transform -translate-x-1/2'>
                         <span className='text-xl text-textPrimary font-extrabold font-robotoSerif italic sm:text-2xl md:text-3xl lg:text-4xl'>{title}</span>
                     </div>
                 )}
 
-                {/* Prawa strona - Ikony użytkownika i menu */}
                 <div className='flex items-center gap-3 sm:gap-4 mr-2'>
                     <UserIcon />
-                    {/* Kliknięcie na ikonę Menu otworzy menu */}
+                    {/* otwieram menu */}
                     <MenuIcon onClick={() => setIsMenuOpen(true)} />
                 </div>
 
             </header>
 
-            {/* Wysuwane menu */}
+            {/* usuwam menu */}
             {isMenuOpen && <Menu onClose={() => setIsMenuOpen(false)} />}
         </>
     );
