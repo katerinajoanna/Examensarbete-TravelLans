@@ -33,7 +33,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ title, description }) => {
 
                 <SearchHome
                     label=""
-                    placeholder="Type a place or continent"
+                    placeholder=""
                 />
 
             </div>
