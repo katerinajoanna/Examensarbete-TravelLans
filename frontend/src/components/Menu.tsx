@@ -17,7 +17,6 @@ const Menu: React.FC<{ onClose: () => void }> = ({ onClose }) => {
         <div className="fixed top-0 right-[26px] h-[100vh] w-1/2 sm:w-1/2 md:w-1/3 xl:w-1/3 xl:h-[100vh] bg-[#0D1023] bg-opacity-65 text-textSecondary shadow-lg z-50 animate-slideIn">
             {/* header menu */}
             <div className="bg-lime-400 text-end p-4">
-
                 <button onClick={onClose} className="text-bgButton text-2xl sm:text-3xl md:text-4xl md:p-[7px] lg:text-4xl lg:p-[11px]">
                     X
                 </button>
