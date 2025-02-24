@@ -1,9 +1,11 @@
+
 import { useNavigate } from 'react-router-dom';
 
 const Menu: React.FC<{ onClose: () => void }> = ({ onClose }) => {
     const navigate = useNavigate();
     const menuItems = [
-        { name: "Galleries", path: "/galleries" },
+        { name: "Home", path: "/" },
+        { name: "Galleries", path: "/#gallery" },
         { name: "About Us", path: "/about" },
         { name: "Login/Register", path: "/login" },
         { name: "My Page", path: "/mypage" },
@@ -27,7 +29,15 @@ const Menu: React.FC<{ onClose: () => void }> = ({ onClose }) => {
                     <button
                         key={item.name}
                         onClick={() => {
-                            navigate(item.path);
+                            if (item.path === "/#gallery") {
+                                navigate("/"); // Przekierowanie na HomePage
+                                setTimeout(() => {
+                                    const section = document.getElementById("gallery");
+                                    if (section) section.scrollIntoView({ behavior: "smooth" });
+                                }, 500); // Opóźnienie pozwala na załadowanie strony przed przewinięciem
+                            } else {
+                                navigate(item.path);
+                            }
                             onClose();
                         }}
                         className="text-base sm:text-xl md:text-2xl xl:text-3xl font-robotoSerif italic font-semibold p-1 hover:underline animate-fadeIn"
@@ -42,3 +52,4 @@ const Menu: React.FC<{ onClose: () => void }> = ({ onClose }) => {
 };
 
 export default Menu;
+
