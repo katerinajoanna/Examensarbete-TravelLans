@@ -13,11 +13,10 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/continent" element={<ContinentPage />} />
-        {/* <Route path="/continent/:continentId" element={<ContinentPage />} /> */}
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/mypage" element={<MyPage />} />
+        <Route path="/continent/:continentName" element={<ContinentPage />} />
       </Routes>
     </Router>
 
