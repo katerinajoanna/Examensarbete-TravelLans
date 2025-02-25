@@ -9,7 +9,7 @@ export default {
     extend: {
       colors: {
         bgLine: '#A8C33F',            // Linie oddzielające, tło headera, stroke
-        textPrimary: '#031BBD',       // Główne teksty (np. nagłówki)
+        textPrimary: '#031BBD',       // Główne teksty (np. nagłówki,arrow)
         textSecondary: '#E5A000',     // Podkreślenia, teksty dodatkowe
         bgOverlay: '#171B3D',           // Pasek przezroczysty na zdjęciu z nazwami kontynentów
         bgButton: '#2B336E',    // Tło przycisków
@@ -21,6 +21,7 @@ export default {
       boxShadow: {
         imgShadow: '-6px 6px 15px rgba(169, 166, 146, 0.45)', // images shadow
         searchShadow: '0px 4px 10px rgba(198, 195, 63, 0.25)',   //search shadow
+        cardShadow: '0px 6px 15px rgba(0, 0, 0, 0.3)',
       },
       fontFamily: {
         robotoSerif: ['Roboto Serif', 'serif'],

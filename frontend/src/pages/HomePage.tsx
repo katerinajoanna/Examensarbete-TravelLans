@@ -30,8 +30,8 @@ const HomePage: React.FC = () => {
                 <div className='w-full h-[0.5px] bg-bgLine mt-12'></div>
 
             </main>
-
             <Footer />
+
         </div>
     );
 }
