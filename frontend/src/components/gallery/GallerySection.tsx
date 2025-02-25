@@ -13,7 +13,7 @@ const GallerySection: React.FC = () => {
                 Galleries
             </h2>
 
-            <div className='grid grid-cols-1 font-robotoFlex tracking-[0.05em] stroke-continent sm:grid-cols-2 lg:grid-cols-2 gap-6 text-2xl '>
+            <div className='grid grid-cols-1 font-robotoFlex tracking-[0.05em] stroke-continent sm:grid-cols-2 lg:grid-cols-3 gap-6 text-2xl '>
                 <GalleryCard title='Africa' image={africa} />
                 <GalleryCard title='Asia' image={asia} />
                 <GalleryCard title='Europe' image={europe} />
