@@ -19,7 +19,7 @@ export default {
 
       },
       boxShadow: {
-        imgShadow: '-6px 6px 15px rgba(169, 166, 146, 0.45)', // images shadow
+        imgShadow: '-6px 6px 12px rgba(169, 166, 146, 0.45)', // images shadow
         searchShadow: '0px 4px 10px rgba(198, 195, 63, 0.25)',   //search shadow
         cardShadow: '0px 6px 15px rgba(0, 0, 0, 0.3)',
       },
