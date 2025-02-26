@@ -23,9 +23,9 @@ const ContinentPage: React.FC = () => {
         <div className="flex flex-col min-h-screen">
             <Header title={continent.name} />
 
-            <main className="flex-1 max-w-7xl mx-auto p-4">
+            <main className="flex-1 max-w-7xl p-4 mx-4 sm:mx-8 md:mx-14 lg:mx-18 xl:mx-auto">
 
-                <p className="text-xl text-center md:text-3xl xl:text-4xl text-textSecondary font-bold italic tracking-wide p-3 md:p-4 xl:p-6 mt-4">{continent.description}</p>
+                <p className="text-xl text-center  md:text-3xl lg:text-4xl xl:text-4xl text-textSecondary font-bold italic tracking-wide p-3 md:p-5 lg:p-6 xl:p-6 mt-6">{continent.description}</p>
 
                 <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {continent.places.map((place) => (
