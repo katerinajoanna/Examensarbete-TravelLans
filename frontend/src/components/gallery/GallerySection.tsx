@@ -7,14 +7,14 @@ const Galleries = () => {
 
     return (
         <section className='max-w-7xl mx-auto p-3'>
-            <h2 className='text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-7xl text-textSecondary text-center font-robotoSans italic font-bold tracking-wider text-stroke mb-8 md:mb-12 lg:mb-14'>
+            <h2 className='text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-7xl text-textSecondary text-center font-robotoSans italic font-bold tracking-wider stroke-gallery mb-8 md:mb-12 lg:mb-14'>
                 Galleries
             </h2>
             <div className="grid grid-cols-1 font-robotoFlex tracking-[0.05em] sm:grid-cols-2 lg:grid-cols-3 gap-6 text-2xl">
                 {Object.entries(continentData).map(([key, continent]) => (
                     <div
                         key={key}
-                        className="relative w-full aspect-video rounded-md overflow-hidden cursor-pointer  shadow-imgShadow"
+                        className="relative w-full aspect-video rounded-md overflow-hidden cursor-pointer border border-bgLine border-opacity-75 shadow-imgShadow"
                         onClick={() => navigate(`/continent/${key}`)}
                     >
                         <video
