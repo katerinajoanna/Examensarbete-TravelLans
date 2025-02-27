@@ -22,12 +22,20 @@ html {
 
 @layer utilities {
     .text-stroke {
-        -webkit-text-stroke: .4px #2e2e2d;
-        text-shadow: 1px 1px 2px rgba(91, 92, 91, 0.3);
+        color: #F0EFE8;
+        text-shadow:
+            -1px -1px 0 #151514,
+            1px -1px 0 #151514,
+            -1px 1px 0 #151514,
+            1px 1px 0 #151514;
     }
 
     .stroke-gallery {
-        -webkit-text-stroke: 0.9px #343433;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        color: #E5A000;
+        text-shadow:
+            -1px -1px 0 #343433,
+            1px -1px 0 #343433,
+            -1px 1px 0 #343433,
+            1px 1px 0 #343433;
     }
 }
