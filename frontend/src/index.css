@@ -20,6 +20,7 @@ html {
     overflow-x: hidden;
 }
 
+
 @layer utilities {
     .text-stroke {
         color: rgba(240, 239, 232, 0.9);
