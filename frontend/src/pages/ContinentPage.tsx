@@ -2,8 +2,8 @@
 import { useParams } from "react-router-dom";
 import { continentData } from "../data/continentData";
 import PlaceCard from "../components/gallery/PlaceCard";
-import Header from "../components/Header";  // Import nagłówka
-import Footer from "../components/Footer";  // Import stopki
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 const ContinentPage: React.FC = () => {
     const { continentName } = useParams();
@@ -22,11 +22,8 @@ const ContinentPage: React.FC = () => {
     return (
         <div className="flex flex-col min-h-screen">
             <Header title={continent.name} />
-
             <main className="flex-1 max-w-7xl p-4 mx-4 sm:mx-8 md:mx-14 lg:mx-18 xl:mx-auto">
-
                 <p className="text-xl text-center sm:text-2xl md:text-3xl lg:text-4xl xl:text-4xl text-textSecondary stroke-gallery font-bold italic tracking-wide p-3 md:p-5 lg:p-6 xl:p-6 mt-6">{continent.description}</p>
-
                 <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {continent.places.map((place) => (
                         <PlaceCard

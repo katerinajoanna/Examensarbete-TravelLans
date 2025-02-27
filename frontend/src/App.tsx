@@ -5,6 +5,7 @@ import ContinentPage from './pages/ContinentPage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import MyPage from './pages/MyPage';
+import LoginRegister from './pages/LoginRegister';
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/mypage" element={<MyPage />} />
         <Route path="/continent/:continentName" element={<ContinentPage />} />
+        <Route path='/login' element={<LoginRegister />} />
       </Routes>
     </Router>
 
