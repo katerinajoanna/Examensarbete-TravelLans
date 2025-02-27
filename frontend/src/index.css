@@ -22,7 +22,7 @@ html {
 
 @layer utilities {
     .text-stroke {
-        color: #F0EFE8;
+        color: rgba(240, 239, 232, 0.9);
         text-shadow:
             -1px -1px 0 #151514,
             1px -1px 0 #151514,
