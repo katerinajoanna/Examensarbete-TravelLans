@@ -9,26 +9,29 @@ provider:
   deploymentMethod: direct
   iam:
     role: arn:aws:iam::796973483684:role/LambdaDynamoDbRole
+  environment:
+    DYNAMODB_TABLE: TravelLensTable
   httpApi:
     cors: true
 
 functions:
-  CreateContinent:
-    handler: functions/addContinent/index.handler
+  AddContinent:
+    handler: functions/addContinent/index.addContinent
     events:
       - httpApi:
           path: /continent
           method: post
 
-  CreatePlace:
-    handler: functions/addPlace/index.handler
+  AddPlace:
+    handler: functions/addPlace/index.addPlace
     events:
       - httpApi:
           path: /place
           method: post
 
   GetContinent:
-    handler: functions/getContinent/index.handler
+    handler: functions/getContinent/index.getContinent
+    
     events:
       - httpApi:
           path: /continent/{continent}

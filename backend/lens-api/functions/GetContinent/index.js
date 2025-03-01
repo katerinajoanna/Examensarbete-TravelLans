@@ -1,4 +1,4 @@
-import { db } from '../../servises/index.js';
+import { db } from '../../services/index.js';
 import { sendResponse, sendError } from '../../responses/index.js';
 
 export const getContinent = async (event) => {
@@ -7,7 +7,7 @@ export const getContinent = async (event) => {
     console.log(`Fetching data for continent: ${continent}`);
 
     const params = {
-        TableName: 'TravelLensTable',
+        TableName: process.env.DYNAMODB_TABLE,
         KeyConditionExpression: 'PK = :pk',
         ExpressionAttributeValues: {
             ':pk': `continent#${continent}`

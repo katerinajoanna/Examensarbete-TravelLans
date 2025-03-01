@@ -12,7 +12,7 @@ export const addContinent = async (event) => {
         }
 
         const params = {
-            TableName: 'TravelLensTable',
+            TableName: process.env.DYNAMODB_TABLE,
             Item: {
                 PK: `continent#${continent}`,
                 SK: 'metadata',
