@@ -7,14 +7,14 @@ const LoginForm = () => {
                     <label className="block text-sm font-medium">Username</label>
                     <input
                         type="text"
-                        className="border border-bgLine focus:border-borderInput focus:outline-none p-2 w-full " />
+                        className="border border-bgLine focus:border-borderInput focus:outline-none p-2 w-full rounded" />
                 </div>
                 <div>
                     <label
                         className="block">Password</label>
                     <input
                         type="password"
-                        className="border border-bgLine focus:border-borderInput focus:outline-none p-2 w-full" />
+                        className="border border-bgLine focus:border-borderInput focus:outline-none p-2 w-full rounded" />
                 </div>
                 <button
                     type="submit"

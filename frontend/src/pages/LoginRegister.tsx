@@ -15,8 +15,8 @@ const LoginRegister = () => {
                 <div className="my-6 flex gap-4">
                     <button
                         className={`px-4 py-2 text-sm md:px-6 md:py-3 md:text-base lg:px-8 lg:py-4 lg:text-lg rounded font-bold tracking-wide transition ${activeForm === 'login'
-                            ? 'bg-bgButton text-textMuted shadow-btnShadow'
-                            : 'bg-textMuted text-bgButton shadow-btnShadow'
+                            ? 'bg-textMuted text-bgButton shadow-btnShadow'
+                            : ' bg-bgButton text-textMuted shadow-btnShadow'
                             }`}
 
                         onClick={() => setActiveForm('login')}
@@ -25,8 +25,8 @@ const LoginRegister = () => {
                     </button>
                     <button
                         className={`px-4 py-2 text-sm md:px-6 md:py-3 md:text-base lg:px-8 lg:py-4 lg:text-lg rounded font-bold tracking-wide transition ${activeForm === 'register'
-                            ? 'bg-bgButton text-textMuted shadow-btnShadow'
-                            : 'bg-textMuted text-bgButton shadow-btnShadow'
+                            ? 'bg-textMuted text-bgButton shadow-btnShadow'
+                            : ' bg-bgButton text-textMuted shadow-btnShadow'
                             }`}
 
                         onClick={() => setActiveForm('register')}
