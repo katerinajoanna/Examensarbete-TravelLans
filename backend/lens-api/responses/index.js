@@ -4,7 +4,7 @@ export function sendResponse(status, data) {
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify({ success: true, data }),
     };
 }
 
@@ -14,6 +14,6 @@ export function sendError(status, data) {
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ success: false, data })
+        body: JSON.stringify({ success: false, error: message })
     };
 }

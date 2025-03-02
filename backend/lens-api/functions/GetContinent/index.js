@@ -22,7 +22,7 @@ export const getContinent = async (event) => {
         const places = result.Items
             .filter(item => item.SK.startsWith('place#'))
             .map(item => ({
-                id: item.SK.replace('place#', ''),
+                id: parseInt(item.SK.replace('place#', ''), 10),
                 title: item.title,
                 country: item.country,
                 category: item.category,
@@ -35,6 +35,9 @@ export const getContinent = async (event) => {
         if (!metadataItem) {
             return sendError(404, `Continent ${continent} not found.`);
         }
+
+        //  sortowanie miejsc po ID
+        places.sort((a, b) => a.id - b.id);
 
         const response = {
             name: metadataItem.name,
