@@ -16,22 +16,21 @@ provider:
 
 functions:
   AddContinent:
-    handler: functions/addContinent/index.addContinent
+    handler: functions/AddContinent/index.addContinent
     events:
       - httpApi:
           path: /continent
           method: post
 
   AddPlace:
-    handler: functions/addPlace/index.addPlace
+    handler: functions/AddPlace/index.addPlace
     events:
       - httpApi:
           path: /place
           method: post
 
   GetContinent:
-    handler: functions/getContinent/index.getContinent
-    
+    handler: functions/GetContinent/index.getContinent
     events:
       - httpApi:
           path: /continent/{continent}
