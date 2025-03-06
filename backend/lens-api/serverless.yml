@@ -43,6 +43,20 @@ functions:
           path: /continent/{continent}
           method: get
 
+  DeletePlace:
+    handler: functions/DeletePlace/index.deletePlace
+    events:
+      - httpApi:
+          path: /place/{continent}/{placeId}
+          method: delete
+
+  UpdatePlace:
+    handler: functions/UpdatePlace/index.updatePlace
+    events:
+      - httpApi:
+          path: /place/{continent}/{placeId}
+          method: put
+
 resources:
   Resources:
     TravelLensTable:
