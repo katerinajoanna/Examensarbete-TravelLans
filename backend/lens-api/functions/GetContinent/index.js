@@ -43,6 +43,7 @@ export const getContinent = async (event) => {
             name: metadataItem.name,
             description: metadataItem.description,
             video: metadataItem.video,
+            image: metadataItem.image || null,
             places
         };
 

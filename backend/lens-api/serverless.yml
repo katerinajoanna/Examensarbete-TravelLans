@@ -57,6 +57,13 @@ functions:
           path: /place/{continent}/{placeId}
           method: put
 
+  UpdateContinent:
+    handler: functions/UpdateContinent/index.updateContinent
+    events:
+      - httpApi:
+          path: /continent/{continent}
+          method: put        
+
 resources:
   Resources:
     TravelLensTable:

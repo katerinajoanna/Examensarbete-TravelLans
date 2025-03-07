@@ -23,6 +23,7 @@ export const getAllContinents = async () => {
                         name: item.name,
                         description: item.description,
                         video: item.video,
+                        image: item.image || null,
                         continent: continentKey,
                         places: []
                     });
@@ -47,6 +48,7 @@ export const getAllContinents = async () => {
                         name: '',
                         description: '',
                         video: '',
+                        image: null,
                         continent: continentKey,
                         places: []
                     });

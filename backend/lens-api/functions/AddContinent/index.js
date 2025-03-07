@@ -5,9 +5,9 @@ export const addContinent = async (event) => {
     try {
         const body = JSON.parse(event.body);
 
-        const { continent, name, description, video } = body;
+        const { continent, name, description, video, image } = body;
 
-        if (!continent || !name || !description || !video) {
+        if (!continent || !name || !description || !video || !image) {
             return sendError(400, 'Missing required fields');
         }
 
@@ -18,7 +18,8 @@ export const addContinent = async (event) => {
                 SK: 'metadata',
                 name,
                 description,
-                video
+                video,
+                image: image || null
             }
         };
 
