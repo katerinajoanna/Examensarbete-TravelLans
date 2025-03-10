@@ -1,6 +1,4 @@
-
 import { HeroSectionProps } from '../types/hero'
-import video1 from '../assets/videos/medium.webm';
 import SearchHome from './SearchHome';
 
 const HeroSection: React.FC<HeroSectionProps> = ({ title, description }) => {
@@ -14,7 +12,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ title, description }) => {
                 muted
                 playsInline
             >
-                <source src={video1} type='video/mp4' />
+                <source src="https://mytrawellens.s3.eu-north-1.amazonaws.com/heroVideo.webm" type='video/mp4' />
                 Video not supported
             </video>
 
