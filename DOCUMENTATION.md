@@ -1,6 +1,22 @@
 # Documentation API
 
-## Endpoint: Lägg til Kontinent
+## Endpoint: Lägg till kontinent
+
+**Endpoint:**
+POST: `https://f1wohl0jpd.execute-api.eu-north-1.amazonaws.com/continent`
+
+**Exempelbody (JSON):**
+```
+{
+    "continent": "northamerica",
+    "name": "North America",
+    "description": "Explore the stunning landscapes of North America",
+    "video": "https://mytrawellens.s3.eu-north-1.amazonaws.com/ampnVideo.mp4"
+}
+```
+
+**Beskrivning:**
+Lägger till en ny kontinent i databasen. Alla fält är obligatoriska för att skapa en ny kontinent.
 
 ## Endpoint: Lägg till plats
 
@@ -24,6 +40,7 @@
     }
 }
 ```
+
 **Beskrivning:**
 Lägger till en ny plats i databasen. Alla fält är obligatoriska för att skapa en ny plats.
 
@@ -44,12 +61,49 @@ PUT: `https://f1wohl0jpd.execute-api.eu-north-1.amazonaws.com/place/europe/0001`
 ```
 
 **Beskrivning:**  
-Uppdaterar information om en plats. `placeId` är en 4-siffrig identifierare, t.ex. `0001`, `0002`, `0003`.
+Uppdaterar information om en plats. `placeId` är en fyrsiffrig identifierare, t.ex. `0001`, `0002`, `0003`.
 
-## Endpoint: Att hämta alla kontinenter
+## Endpoint: Hämta alla kontinenter
 
-## Endpoint: Att hämta ett kontinent
+**Endpoint:**
+GET: `https://f1wohl0jpd.execute-api.eu-north-1.amazonaws.com/continents`
 
-## Endpoint:  Att ta bort en plats
+**Beskrivning:** 
+Hämtar information om alla kontinenter och deras geografiska lägen (platser).
 
-## Endpoint: Att uppdatera kontinent
+## Endpoint: Hämta ett kontinent
+
+**Endpoint:**
+GET: `https://f1wohl0jpd.execute-api.eu-north-1.amazonaws.com/continent/{continent}`
+
+**Exempel:**
+GET: `https://f1wohl0jpd.execute-api.eu-north-1.amazonaws.com/continent/oceania`
+
+**Beskrivning:**
+Hämtar information om en specifik kontinent och dess geografiska platser.
+
+## Endpoint:  Ta bort en plats
+
+**Endpoint:**
+DELETE: `https://f1wohl0jpd.execute-api.eu-north-1.amazonaws.com/place/{continent}/{placeId}`
+
+**Exempel:**
+DELETE: `https://f1wohl0jpd.execute-api.eu-north-1.amazonaws.com/place/europe/0010`
+
+**Beskrivning:**
+Obs! `placeId` är en fyrsiffrig identifierare, t.ex. `0001`, `0002`, `0003`.
+
+## Endpoint: Uppdatera en kontinent
+
+**Endpoint:**
+PUT: `https://f1wohl0jpd.execute-api.eu-north-1.amazonaws.com/continent/{continent}`
+
+**Exempel:**
+PUT: `https://f1wohl0jpd.execute-api.eu-north-1.amazonaws.com/continent/europe`
+
+**Exempelbody (JSON):**
+```json
+{
+    "description": "Ny beskrivning"
+}
+```
