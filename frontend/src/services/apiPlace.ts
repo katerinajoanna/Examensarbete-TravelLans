@@ -1,6 +1,6 @@
 const BASE_URL = 'https://f1wohl0jpd.execute-api.eu-north-1.amazonaws.com/';
 
-export const featchPlace = async (continent: string, category: string) => {
+export const fetchPlace = async (continent: string, category: string) => {
     try {
         const response = await fetch(`${BASE_URL}continent/${continent}/places?category=${category}`);
         console.log(`Fetching data from: ${BASE_URL}continent/${continent}/places?category=${category}`);

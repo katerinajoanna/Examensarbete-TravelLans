@@ -1,48 +1,22 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { fetchContinents } from "../../services/apiContinents"; // Import funkcji
-
-
-// Interfejsy dla danych
-interface Place {
-    id: number;
-    title: string;
-    country: string;
-    category: string;
-    description: string;
-    video: string | null;
-    image: string;
-    linkInfo: string;
-    location: {
-        lng: number;
-        lat: number;
-    };
-}
-
-interface Continent {
-    name: string;
-    description: string;
-    video: string;
-    image: string | null;
-    continent: string;
-    places: Place[];
-}
-
+import { fetchContinents } from "../../services/apiContinents";
+import { Continent } from "../../types/dataContinent";
 
 const Galleries = () => {
-    const [continents, setContinents] = useState<Continent[]>([]); // Stan dla kontynentów
-    const [loading, setLoading] = useState(true); // Stan ładowania
+    const [continents, setContinents] = useState<Continent[]>([]); // Status för kontinenter
+    const [loading, setLoading] = useState(true);
     const navigate = useNavigate();
 
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const continentsData = await fetchContinents(); // Pobierz dane z API
-                setContinents(continentsData); // Ustaw pobrane dane w stanie
+                const continentsData = await fetchContinents();
+                setContinents(continentsData);
             } catch (error) {
                 console.error("Błąd podczas ładowania danych kontynentów", error);
             } finally {
-                setLoading(false); // Zakończenie ładowania
+                setLoading(false);
             }
         };
 
