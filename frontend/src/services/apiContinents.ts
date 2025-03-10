@@ -6,8 +6,10 @@ export const fetchContinents = async () => {
         if (!response.ok) {
             throw new Error('Det gick inte att hämta kontinenter');
         }
-        const jsonResponse = await response.json();   // Parsowanie odpowiedzi jako JSON
-        return jsonResponse.data;    // Zwrócenie danych zawartych w polu `data`
+        const jsonResponse = await response.json();
+        console.log('API Response:', jsonResponse);
+
+        return jsonResponse.data;
     } catch (error) {
         console.error('Fel vid hämtning av kontinenter:', error);
         throw error;

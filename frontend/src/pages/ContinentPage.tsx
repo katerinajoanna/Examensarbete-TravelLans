@@ -4,21 +4,7 @@ import { fetchContinents } from "../services/apiContinents";
 import PlaceCard from "../components/gallery/PlaceCard";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-
-// Typ danych kontynentu
-interface Continent {
-    name: string;
-    description: string;
-    places: Array<{
-        id: number;
-        title: string;
-        image: string;
-        country: string;
-        category: string;
-        description: string;
-        linkInfo: string;
-    }>;
-}
+import { Continent } from "../types/dataContinent";
 
 const ContinentPage: React.FC = () => {
     const { continentName } = useParams<{ continentName: string }>();
@@ -86,17 +72,22 @@ const ContinentPage: React.FC = () => {
                     {continent.description}
                 </p>
                 <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {continent.places.map((place) => (
-                        <PlaceCard
-                            key={place.id}
-                            title={place.title}
-                            image={place.image}
-                            country={place.country}
-                            category={place.category}
-                            description={place.description}
-                            linkInfo={place.linkInfo}
-                        />
-                    ))}
+
+                    {continent.places && continent.places.length > 0 ? (
+                        continent.places.map((place) => (
+                            <PlaceCard
+                                key={place.id}
+                                title={place.title}
+                                image={place.image}
+                                country={place.country}
+                                category={place.category}
+                                description={place.description}
+                                linkInfo={place.linkInfo} id={0} />
+                        ))
+                    ) : (
+                        <p>No places available</p>
+                    )}
+
                 </div>
             </main>
             <div className="w-11/12 h-[0.5px] bg-bgLine mx-auto my-6"></div>

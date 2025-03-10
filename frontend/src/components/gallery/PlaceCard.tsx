@@ -1,10 +1,9 @@
 import { Link } from "react-router-dom";
 import ArrowRight from "../iconsSvg/ArrowRight";
-import { PlaceCardProps } from "../../types/placeCard";
+import { Place } from "../../types/place";
 
-const PlaceCard: React.FC<PlaceCardProps> = ({ title, image, country, category, description, linkInfo }) => {
+const PlaceCard: React.FC<Place> = ({ title, image, country, category, description, linkInfo }) => {
     return (
-
         <div className="bg-gradient-to-r from-[#f5f5f5] to-[#e8edd2] font-robotoSerif p-4 border border-bgLine rounded-md shadow-imgShadow">
             <img
                 src={image}
