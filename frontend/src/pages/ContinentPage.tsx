@@ -11,18 +11,20 @@ const ContinentPage: React.FC = () => {
     const [continent, setContinent] = useState<Continent | null>(null);
     const [loading, setLoading] = useState<boolean>(true);
     const [error, setError] = useState<string | null>(null);
+    const [note, setNote] = useState<string>(""); // Stan do przechowywania notatki
+    const [notes, setNotes] = useState<string[]>([]); // Tablica notatek
 
     useEffect(() => {
-        // Funktion för att ladda ner kontinent efter namn
+        // Funktion för att ladda kontinent efter namn
         const fetchData = async () => {
             try {
                 setLoading(true);
-                setError(null); // Återställningsfel före ny fråga
+                setError(null);
                 const continents = await fetchContinents();
 
                 const selectedContinent = continents.find(
                     (c: Continent) => c.name.toLowerCase() === continentName?.toLowerCase()
-                ); // Hitta en kontinent med namn (baserat på namn)
+                );       // Vi letar efter en kontinent vid namn
 
                 if (selectedContinent) {
                     setContinent(selectedContinent);
@@ -38,7 +40,14 @@ const ContinentPage: React.FC = () => {
         };
 
         fetchData();
-    }, [continentName]); // Beroende av "continentName"
+    }, [continentName]);
+
+    const handleAddNote = () => {
+        if (note.trim()) {
+            setNotes([...notes, note]);
+            setNote("");     // Återställ textfältet efter att ha lagt till en anteckning
+        }
+    };
 
     if (loading) {
         return <div>Loading...</div>;
@@ -72,7 +81,6 @@ const ContinentPage: React.FC = () => {
                     {continent.description}
                 </p>
                 <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
                     {continent.places && continent.places.length > 0 ? (
                         continent.places.map((place) => (
                             <PlaceCard
@@ -82,14 +90,49 @@ const ContinentPage: React.FC = () => {
                                 country={place.country}
                                 category={place.category}
                                 description={place.description}
-                                linkInfo={place.linkInfo} id={0} />
+                                linkInfo={place.linkInfo}
+                                id={0}
+                            />
                         ))
                     ) : (
                         <p>No places available</p>
                     )}
-
                 </div>
             </main>
+
+            <div className="w-11/12 h-[0.5px] bg-bgLine mx-auto my-6"></div>
+
+            {/* Anteckningar avsnitt */}
+            <div className="w-11/12 mx-auto mb-6">
+                <h3 className="text-2xl text-textSecondary font-bold mb-4">Your Notes</h3>
+                <textarea
+                    value={note}
+                    onChange={(e) => setNote(e.target.value)}
+                    placeholder="Write your note here..."
+                    className="w-full p-2 border rounded-md mb-4"
+                />
+                <button
+                    onClick={handleAddNote}
+                    className="bg-primary text-green-600 py-2 px-4 rounded-md hover:text-green-400 focus:text-green-400 focus:outline-none"
+                >
+                    Add Note
+                </button>
+
+                {/* Visa sparade anteckningar */}
+                <div className="mt-6">
+                    {notes.length > 0 ? (
+                        <ul>
+                            {notes.map((note, index) => (
+                                <li key={index} className="bg-gray-100 p-3 rounded-md my-2">
+                                    {note}
+                                </li>
+                            ))}
+                        </ul>
+                    ) : (
+                        <p className="text-red-700">No notes added yet.</p>
+                    )}
+                </div>
+            </div>
             <div className="w-11/12 h-[0.5px] bg-bgLine mx-auto my-6"></div>
             <Footer />
         </div>
