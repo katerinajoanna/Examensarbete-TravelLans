@@ -1,5 +1,5 @@
-
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
+import CloseIcon from "../components/iconsSvg/CloseIcon";
 
 const Menu: React.FC<{ onClose: () => void }> = ({ onClose }) => {
     const navigate = useNavigate();
@@ -14,11 +14,13 @@ const Menu: React.FC<{ onClose: () => void }> = ({ onClose }) => {
     ];
 
     return (
-        <div className="fixed top-0 right-[26px] h-[100vh] w-1/2 sm:w-1/2 md:w-1/3 xl:w-1/3 xl:h-[100vh] bg-[#0D1023] bg-opacity-65 text-textSecondary shadow-lg z-50 animate-slideIn">
-            {/* header menu */}
-            <div className="bg-lime-400 text-end p-4">
-                <button onClick={onClose} className="text-bgButton text-2xl sm:text-3xl md:text-4xl md:p-[7px] lg:text-4xl lg:p-[11px]">
-                    X
+        <div className="fixed top-16 sm:top-[4rem] md:top-[5.4rem] lg:top-[5.9rem] right-[26px] h-[100vh] w-1/2 sm:w-1/2 md:w-1/3 xl:w-1/3 xl:h-[100vh] bg-[#0D1023] bg-opacity-65 text-textSecondary shadow-lg z-50 animate-slideIn">
+            <div className="flex justify-end p-4">
+                <button
+                    onClick={onClose}
+                    className="p-2 focus:outline-none"
+                >
+                    <CloseIcon />
                 </button>
             </div>
 
@@ -29,11 +31,11 @@ const Menu: React.FC<{ onClose: () => void }> = ({ onClose }) => {
                         key={item.name}
                         onClick={() => {
                             if (item.path === "/#gallery") {
-                                navigate("/"); // Przekierowanie na HomePage
+                                navigate("/");
                                 setTimeout(() => {
                                     const section = document.getElementById("gallery");
                                     if (section) section.scrollIntoView({ behavior: "smooth" });
-                                }, 500); // Opóźnienie pozwala na załadowanie strony przed przewinięciem
+                                }, 500);
                             } else {
                                 navigate(item.path);
                             }
@@ -51,4 +53,3 @@ const Menu: React.FC<{ onClose: () => void }> = ({ onClose }) => {
 };
 
 export default Menu;
-
