@@ -62,7 +62,21 @@ functions:
     events:
       - httpApi:
           path: /continent/{continent}
-          method: put        
+          method: put 
+
+  GetPlacesByCategoryAndContinent:
+    handler: functions/GetPlacesByCategoryAndContinent/index.getPlacesByCategoryAndContinent  
+    events:
+      - httpApi:
+          path: /places/{continent}/{category}
+          method: get
+
+  GetPlaceById:
+    handler: functions/GetPlaceById/index.getPlaceById
+    events:
+      - httpApi:
+          path: /place/{continent}/{placeId}
+          method: get
 
 resources:
   Resources:
