@@ -8,12 +8,12 @@ export function sendResponse(status, data) {
     };
 }
 
-export function sendError(status, data) {
+export function sendError(status, errorMessage) {
     return {
         statusCode: status,
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ success: false, error: message })
+        body: JSON.stringify({ success: false, error: errorMessage })
     };
 }

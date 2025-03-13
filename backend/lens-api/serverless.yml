@@ -11,9 +11,14 @@ provider:
     role: arn:aws:iam::796973483684:role/LambdaDynamoDbRole
   environment:
     DYNAMODB_TABLE: TravelLensTable
+    DYNAMODB_USERS_TABLE: UsersTable
+    JWT_SECRET: my-super-secret-key
   httpApi:
     cors: true
 
+plugins:
+  - serverless-offline
+  
 functions:
   GetAllContinents:
     handler: functions/GetAllContinents/index.getAllContinents
@@ -78,6 +83,13 @@ functions:
           path: /place/{continent}/{placeId}
           method: get
 
+  RegisterUser:
+    handler: functions/auth/Register/index.registerUser
+    events:
+      - httpApi:
+          path: /auth/register
+          method: post
+
 resources:
   Resources:
     TravelLensTable:
@@ -95,3 +107,20 @@ resources:
           - AttributeName: SK
             KeyType: RANGE
         BillingMode: PAY_PER_REQUEST
+
+    UsersTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: UsersTable
+        AttributeDefinitions:
+          - AttributeName: PK
+            AttributeType: S
+          - AttributeName: SK
+            AttributeType: S
+        KeySchema:
+          - AttributeName: PK
+            KeyType: HASH
+          - AttributeName: SK
+            KeyType: RANGE
+        BillingMode: PAY_PER_REQUEST
+
