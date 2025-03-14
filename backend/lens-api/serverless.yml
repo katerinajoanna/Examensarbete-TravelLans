@@ -12,7 +12,7 @@ provider:
   environment:
     DYNAMODB_TABLE: TravelLensTable
     DYNAMODB_USERS_TABLE: UsersTable
-    JWT_SECRET: my-super-secret-key
+    JWT_SECRET: ${env:JWT_SECRET}
   httpApi:
     cors: true
 
@@ -89,6 +89,35 @@ functions:
       - httpApi:
           path: /auth/register
           method: post
+
+  LoginUser:
+    handler: functions/auth/Login/index.loginUser
+    events:
+      - httpApi:
+          path: /auth/login
+          method: post
+
+  AddFavorite:
+    handler: functions/auth/Favorite/index.addFavorite
+    events:
+      - httpApi:
+          path: /auth/favorite
+          method: post
+
+  AddNote:
+    handler: functions/auth/Notes/index.addNote
+    events:
+      - httpApi:
+          path: /auth/note
+          method: post
+
+  RefreshToken:
+    handler: functions/auth/RefreshToken/index.refreshToken
+    events:
+      - httpApi:
+          path: /auth/refresh
+          method: post
+
 
 resources:
   Resources:
