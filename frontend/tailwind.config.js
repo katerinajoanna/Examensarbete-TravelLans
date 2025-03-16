@@ -16,7 +16,7 @@ export default {
         bgNoteLight: '#D8E1B6',       // Tło jasne dla wpisywania notatek/opisów
         bgNoteDark: '#F2F4EA',        // Alternatywne tło dla notatek/opisów
         textMuted: '#F0EFE8',        // Kolor tekstu na jasnych tłach
-        borderInput: '#2c6c9a',
+        borderInput: '#2C6C9A',
       },
       boxShadow: {
         imgShadow: '-6px 6px 12px rgba(169, 166, 146, 0.45)', // images shadow

@@ -18,7 +18,7 @@ const LoginForm = () => {
                 </div>
                 <button
                     type="submit"
-                    className="w-full bg-bgButton bg-opacity-90 text-textMuted py-2 rounded">Login</button>
+                    className="w-full bg-bgButton bg-opacity-90 text-textMuted py-2 rounded hover:bg-opacity-100 focus:bg-opacity-100 active:bg-opacity-100 transition">Login</button>
             </form>
         </section>
     );
