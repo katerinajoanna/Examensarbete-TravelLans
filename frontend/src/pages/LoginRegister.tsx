@@ -36,7 +36,7 @@ const LoginRegister = () => {
                 </div>
 
                 {activeForm === 'login' && <LoginForm />}
-                {activeForm === 'register' && <RegisterForm />}
+                {activeForm === 'register' && <RegisterForm setActiveForm={setActiveForm} />}
             </main>
             <div className="w-11/12 h-[0.5px] bg-bgLine mx-auto my-2"></div>
             <Footer />
