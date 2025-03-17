@@ -9,7 +9,13 @@ export const generateAccessToken = (user) => {
     //console.log("Generating Access Token for:", user);
     //console.log("JWT_SECRET:", process.env.JWT_SECRET); // DEBUG
     return jwt.sign(
-        { id: user.id, username: user.username, role: user.role },
+        {
+            id: user.id,
+            username: user.username,
+            role: user.role,
+            country: user.country,
+            city: user.city
+        },
         process.env.JWT_SECRET,
         { expiresIn: "2h" }
     );
