@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Place } from "../../types/place";
-
 import ArrowRight from "../iconsSvg/ArrowRight";
 import Modal from "../../components/Modal";
 import FavoriteIcon from "../iconsSvg/FavoriteIcon";
@@ -21,10 +20,11 @@ const PlaceCard: React.FC<Place> = ({ title, image, country, description, linkIn
                 alt={title}
                 className="w-full h-48 object-cover rounded-md shadow-cardShadow border border-bgLine"
             />
-            <div className="m-3 ">
+
+            <div className="flex justify-end m-3 ">
                 <FavoriteIcon isFavorite={isFavorite} onClick={handleFavoriteClick} />
             </div>
-            <h3 className="text-xl text-textPrimary md:text-2xl xl:text-3xl font-bold p-1 mt-2">{title}</h3>
+            <h3 className="text-xl text-textPrimary md:text-2xl xl:text-3xl font-bold p-1">{title}</h3>
             <p className="text-base md:text-lg xl:text-xl text-bgOverlay font-bold p-1">{country}</p>
 
             {/* Kort text */}

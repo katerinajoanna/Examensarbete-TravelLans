@@ -49,7 +49,6 @@ const Header: React.FC<HeaderProps> = ({ title }) => {
                     {/* otwieram menu */}
                     <MenuIcon onClick={() => setIsMenuOpen(true)} />
                 </div>
-
             </header >
 
             {/* usuwam menu */}

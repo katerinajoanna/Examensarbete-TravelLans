@@ -38,5 +38,9 @@ export const loginUser = async (credentials: { username: string; password: strin
     if (!response.ok) {
         throw new Error(data.error || "Login failed!");
     }
+
+    //  Sparar token till localStorage
+    localStorage.setItem("accessToken", data.data.accessToken);
+
     return data;
 };
