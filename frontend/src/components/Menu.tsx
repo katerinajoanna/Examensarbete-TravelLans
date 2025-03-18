@@ -8,7 +8,7 @@ const Menu: React.FC<{ onClose: () => void }> = ({ onClose }) => {
         { name: "Galleries", path: "/#gallery" },
         { name: "About Us", path: "/about" },
         { name: "Login/Register", path: "/login" },
-        { name: "My Page", path: "/mypage" },
+        { name: "Favorites", path: "/favorite" },
         { name: "Contact", path: "/contact" },
         { name: "Map", path: "/map" },
     ];

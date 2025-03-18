@@ -2,11 +2,11 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 
 
-const MyPage = () => {
+const FavoritesPage = () => {
 
     return (
         <div className="flex flex-col min-h-screen">
-            <Header title='My page' />
+            <Header title='Favorites' />
             <main className="flex-1 max-w-7xl p-4 mx-4 sm:mx-8 md:mx-14 lg:mx-18 xl:mx-auto">
 
             </main>
@@ -16,5 +16,5 @@ const MyPage = () => {
     );
 }
 
-export default MyPage;
+export default FavoritesPage;
 
