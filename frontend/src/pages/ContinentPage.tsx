@@ -373,10 +373,16 @@ const ContinentPage: React.FC = () => {
             });
 
             if (!response.ok) {
-                throw new Error("Failed to add note.");
+                throw new Error("Failed to add note. You need to log in");
             }
 
             const responseData = await response.json();
+            console.log("Odpowiedź z backendu:", responseData);
+
+
+            if (!response.ok) {
+                throw new Error(`Błąd ${response.status}: ${responseData.message || "Nieznany błąd"}`);
+            }
 
             // // Symulujemy użytkownika (pobierz te dane z backendu, jeśli masz)
             // const newNote: Note = {
