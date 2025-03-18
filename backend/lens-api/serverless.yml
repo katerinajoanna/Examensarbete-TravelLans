@@ -12,6 +12,8 @@ provider:
   environment:
     DYNAMODB_TABLE: TravelLensTable
     DYNAMODB_USERS_TABLE: UsersTable
+    DYNAMODB_NOTES_TABLE: NotesTable
+    DYNAMODB_FAVORITES_TABLE: FavoritesTable
     JWT_SECRET: ${env:JWT_SECRET}
   httpApi:
     cors: true
@@ -104,6 +106,14 @@ functions:
           path: /auth/favorite
           method: post
 
+  GetFavorites:
+    handler: functions/auth/GetFavorites/index.getFavorites
+    events:
+      - httpApi:
+          path: /auth/favorites/{userId} 
+          method: get
+        
+
   AddNote:
     handler: functions/auth/Notes/index.addNote
     events:
@@ -111,13 +121,19 @@ functions:
           path: /auth/note
           method: post
 
+  GetNotes:
+    handler: functions/auth/GetNotes/index.getNotes
+    events:
+      - httpApi:
+          path: /auth/notes/{continent}
+          method: get        
+
   RefreshToken:
     handler: functions/auth/RefreshToken/index.refreshToken
     events:
       - httpApi:
           path: /auth/refresh
           method: post
-
 
 resources:
   Resources:
@@ -153,3 +169,34 @@ resources:
             KeyType: RANGE
         BillingMode: PAY_PER_REQUEST
 
+    NotesTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: NotesTable
+        AttributeDefinitions:
+          - AttributeName: PK
+            AttributeType: S
+          - AttributeName: SK
+            AttributeType: S
+        KeySchema:
+          - AttributeName: PK
+            KeyType: HASH
+          - AttributeName: SK
+            KeyType: RANGE
+        BillingMode: PAY_PER_REQUEST
+
+    FavoritesTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: FavoritesTable
+        AttributeDefinitions:
+          - AttributeName: PK
+            AttributeType: S
+          - AttributeName: SK
+            AttributeType: S
+        KeySchema:
+          - AttributeName: PK
+            KeyType: HASH
+          - AttributeName: SK
+            KeyType: RANGE
+        BillingMode: PAY_PER_REQUEST        
