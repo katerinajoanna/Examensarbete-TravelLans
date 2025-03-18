@@ -4,9 +4,15 @@ import { Place } from "../../types/place";
 
 import ArrowRight from "../iconsSvg/ArrowRight";
 import Modal from "../../components/Modal";
+import FavoriteIcon from "../iconsSvg/FavoriteIcon";
 
 const PlaceCard: React.FC<Place> = ({ title, image, country, description, linkInfo }) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isFavorite, setIsFavorite] = useState(false);
+
+    const handleFavoriteClick = () => {
+        setIsFavorite((prev) => !prev);
+    };
 
     return (
         <div className="bg-gradient-to-r from-[#f5f5f5] to-[#e8edd2] font-robotoSerif p-4 border border-bgLine rounded-md shadow-imgShadow">
@@ -15,6 +21,9 @@ const PlaceCard: React.FC<Place> = ({ title, image, country, description, linkIn
                 alt={title}
                 className="w-full h-48 object-cover rounded-md shadow-cardShadow border border-bgLine"
             />
+            <div className="m-3 ">
+                <FavoriteIcon isFavorite={isFavorite} onClick={handleFavoriteClick} />
+            </div>
             <h3 className="text-xl text-textPrimary md:text-2xl xl:text-3xl font-bold p-1 mt-2">{title}</h3>
             <p className="text-base md:text-lg xl:text-xl text-bgOverlay font-bold p-1">{country}</p>
 
