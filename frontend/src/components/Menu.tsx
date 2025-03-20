@@ -14,7 +14,7 @@ const Menu: React.FC<{ onClose: () => void }> = ({ onClose }) => {
     ];
 
     return (
-        <div className="fixed top-16 sm:top-[4rem] md:top-[5.4rem] lg:top-[5.9rem] right-[26px] h-[100vh] w-1/2 sm:w-1/2 md:w-1/3 xl:w-1/3 xl:h-[100vh] bg-[#0D1023] bg-opacity-65 text-textSecondary shadow-lg z-50 animate-slideIn">
+        <div className="fixed top-16 sm:top-[4rem] md:top-[5.4rem] lg:top-[5.9rem] right-[26px] h-[100vh] w-1/2 sm:w-1/2 md:w-1/3 xl:w-1/3 xl:h-[100vh] bg-[#0D1023] bg-opacity-65 text-textSecondary shadow-lg z-50 animate-slideInMenu">
             <div className="flex justify-end p-4">
                 <button
                     onClick={onClose}
