@@ -1,4 +1,3 @@
-
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import HeroSection from "../components/Hero";
@@ -37,3 +36,4 @@ const HomePage: React.FC = () => {
 }
 
 export default HomePage;
+
