@@ -6,9 +6,9 @@ import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import LoginRegister from './pages/LoginRegister';
 import FavoritesPage from './pages/FavoritesPage';
+import SearchResultsPage from './pages/SearchResultsPage';
 
 function App() {
-
 
   return (
     <Router>
@@ -19,6 +19,7 @@ function App() {
         <Route path="/favorite" element={<FavoritesPage />} />
         <Route path="/continent/:continentName" element={<ContinentPage />} />
         <Route path='/login' element={<LoginRegister />} />
+        <Route path="/places/:continentName/:category" element={<SearchResultsPage />} />
       </Routes>
     </Router>
 
