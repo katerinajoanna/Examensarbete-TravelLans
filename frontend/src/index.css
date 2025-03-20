@@ -20,7 +20,6 @@ html {
     overflow-x: hidden;
 }
 
-
 @layer utilities {
     .text-stroke {
         color: rgba(240, 239, 232, 0.9);
@@ -38,5 +37,25 @@ html {
             1px -1px 0 #343433,
             -1px 1px 0 #343433,
             1px 1px 0 #343433;
+    }
+}
+
+/* stilar för autofyll */
+@layer base {
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+        background-color: transparent !important;
+        color: #cfcfcf !important;
+        -webkit-box-shadow: 0 0 0px 1000px rgba(24, 26, 30, 0.2) inset !important;
+        transition: background-color 5000s ease-in-out 0s, color 5000s ease-in-out 0s !important;
+        caret-color: #cfcfcf !important;
+    }
+
+    /* Förhindrar att text blir svart */
+    input:-webkit-autofill::first-line {
+        color: #cfcfcf !important;
     }
 }
