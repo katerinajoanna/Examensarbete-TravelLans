@@ -5,15 +5,16 @@ import PlaceCard from "../components/gallery/PlaceCard";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { Place } from "../types/place";
+import { useFavoritesContext } from "../contexts/FavoritesContext";
 
 const SearchResultsPage: React.FC = () => {
     const { continentName, category } = useParams<{ continentName: string; category: string }>();
-    const decodedCategory = category ? decodeURIComponent(category) : "";
-    console.log("Decoded category:", decodedCategory);
 
     const [places, setPlaces] = useState<Place[]>([]);
     const [loading, setLoading] = useState<boolean>(true);
     const [error, setError] = useState<string | null>(null);
+
+    const { favorites, toggleFavorite } = useFavoritesContext();
 
     useEffect(() => {
         const fetchData = async () => {
@@ -26,8 +27,6 @@ const SearchResultsPage: React.FC = () => {
                 }
 
                 const placesData = await fetchCategoryPlaces(continentName, category);
-                //console.log("Otrzymane miejsca:", placesData);
-
                 setPlaces(placesData);
             } catch (err) {
                 setError("Error fetching search results");
@@ -52,13 +51,17 @@ const SearchResultsPage: React.FC = () => {
                         places.map((place) => (
                             <PlaceCard
                                 key={place.id}
+                                id={place.id}
                                 title={place.title}
                                 image={place.image}
                                 country={place.country}
                                 category={place.category}
                                 description={place.description}
                                 linkInfo={place.linkInfo}
-                                id={place.id}
+                                continent={continentName!}
+                                isFavorite={favorites.some((fav) => fav.id === place.id && fav.continent === continentName)}
+                                toggleFavorite={toggleFavorite}
+
                             />
                         ))
                     ) : (
