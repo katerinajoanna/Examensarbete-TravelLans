@@ -47,7 +47,7 @@ const SearchHome: React.FC<SearchHomeProps> = ({ label }) => {
                 onChange={handleSearchChange}
                 onKeyDown={(e) => e.key === "Enter" && handleSearchSubmit()}
                 placeholder="Enter a continent and categories (e.g., 'northamerica mountains')"
-                className="w-full p-3 pt-3 pr-12 border border-bgLine border-opacity-50 rounded-md focus:outline-none bg-[#181a1e] bg-opacity-40
+                className="search-input w-full p-3 pt-3 pr-12 border border-bgLine border-opacity-50 rounded-md focus:outline-none bg-[#181a1e] bg-opacity-40
                    focus:border-bgLine text-textMuted shadow-searchShadow sm:text-md md:text-xl lg:text-2xl"
             />
             <div

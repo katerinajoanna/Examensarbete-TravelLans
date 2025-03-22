@@ -21,6 +21,8 @@ html {
 }
 
 @layer utilities {
+
+    /* Text med kantlinje för bättre läsbarhet */
     .text-stroke {
         color: rgba(240, 239, 232, 0.9);
         text-shadow:
@@ -30,6 +32,7 @@ html {
             1px 1px 0 #151514;
     }
 
+    /* Kantlinje för galleritext */
     .stroke-gallery {
         color: #E5A000;
         text-shadow:
@@ -43,10 +46,10 @@ html {
 /* stilar för autofyll */
 @layer base {
 
-    input:-webkit-autofill,
-    input:-webkit-autofill:hover,
-    input:-webkit-autofill:focus,
-    input:-webkit-autofill:active {
+    input.search-input:-webkit-autofill,
+    input.search-input:-webkit-autofill:hover,
+    input.search-input:-webkit-autofill:focus,
+    input.search-input:-webkit-autofill:active {
         background-color: transparent !important;
         color: #cfcfcf !important;
         -webkit-box-shadow: 0 0 0px 1000px rgba(24, 26, 30, 0.2) inset !important;
@@ -54,8 +57,9 @@ html {
         caret-color: #cfcfcf !important;
     }
 
-    /* Förhindrar att text blir svart */
-    input:-webkit-autofill::first-line {
-        color: #cfcfcf !important;
+    input.login-input:-webkit-autofill {
+        background-color: white !important;
+        color: black !important;
+        -webkit-box-shadow: 0 0 0px 1000px white inset !important;
     }
 }

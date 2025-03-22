@@ -37,7 +37,7 @@ export default {
       slideIn: "slideIn 3s ease-out forwards",
       fadeIn: "fadeIn 6s ease-out forwards",
       slideInLeft: "slideInLeft 3s ease-out forwards",
-      slideInMenu: "slideInMenu 1s ease-in forwards"
+      slideInMenu: "slideInMenu 1s ease forwards"
     },
     keyframes: {
       slideIn: {
@@ -56,14 +56,11 @@ export default {
         "100%": { transform: "translateX(0)", opacity: "1" }
       },
       slideInMenu: {
-        "0%": { transform: "translateY(20px)", opacity: "0" },
-        "30%": { transform: "translateY(10px)", opacity: "0.4" },
-        "60%": { transform: "translateY(5px)", opacity: "0.7" },
-        "100%": { transform: "translateY(0)", opacity: "1" }
+        "0%": { transform: "translateX(100%)" },
+        "100%": { transform: "translateX(0)" }
       }
     }
   },
 
   plugins: [],
 }
-

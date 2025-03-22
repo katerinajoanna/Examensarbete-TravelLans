@@ -7,7 +7,7 @@ function FavoriteIcon({ isFavorite, onClick }: FavoriteProps) {
             viewBox="0 0 512 512"
             strokeWidth="1.4"
             stroke="currentColor"
-            className={`w-[40px] h-[40px] transition-all duration-300 cursor-pointer 
+            className={`w-[40px] h-[40px] transition-all duration-300 cursor-pointer
                 ${isFavorite ? "fill-yellow-400" : "fill-[#76c635]"}`}
             onClick={onClick}
         >

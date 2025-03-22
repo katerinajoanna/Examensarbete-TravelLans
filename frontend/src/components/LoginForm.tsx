@@ -70,7 +70,7 @@ const LoginForm = () => {
             <form className="space-y-4" onSubmit={handleSubmit}>
                 <div>
                     <label className="block">Username</label>
-                    <input type="text" name="username" value={formData.username} onChange={handleChange} className="border border-bgLine focus:border-borderInput focus:outline-none p-2 w-full rounded" />
+                    <input type="text" name="username" value={formData.username} onChange={handleChange} className="login-input border border-bgLine focus:border-borderInput focus:outline-none p-2 w-full rounded" />
                 </div>
                 <div>
                     <label className="block">Password</label>
