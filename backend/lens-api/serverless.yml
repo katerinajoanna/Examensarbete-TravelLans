@@ -99,6 +99,13 @@ functions:
           path: /auth/login
           method: post
 
+  GetUser:
+    handler: functions/auth/GetUser/index.getUser
+    events:
+      - httpApi:
+          path: /auth/user
+          method: get
+        
   AddFavorite:
     handler: functions/auth/Favorite/index.addFavorite
     events:

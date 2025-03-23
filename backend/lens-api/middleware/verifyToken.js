@@ -15,7 +15,6 @@ export const verifyToken = (event) => {
 
         const token = authHeader.split(" ")[1];
         const decoded = jwt.verify(token, process.env.JWT_SECRET);
-
         //console.log("Token decoded:", decoded); // Sprawdzam, czy token jest poprawnie dekodowany
 
         return decoded;
