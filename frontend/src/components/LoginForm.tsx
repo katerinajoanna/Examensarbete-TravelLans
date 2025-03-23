@@ -24,14 +24,14 @@ const LoginForm = () => {
 
             if (response.success && response.data.accessToken) {
                 localStorage.setItem("accessToken", response.data.accessToken);
-                // console.log("Token saved:", localStorage.getItem("accessToken"));
+                console.log("Token saved:", localStorage.getItem("accessToken"));
                 setSuccess("Login successful! Redirecting...");
                 setTimeout(() => navigate('/'), 2000);
             } else {
                 throw new Error(response.data?.message || "Login failed.");
             }
         } catch (error) {
-            //console.error("Błąd rejestracji:", error);
+            console.error("Błąd rejestracji:", error);
 
             if (
                 error instanceof Error &&
