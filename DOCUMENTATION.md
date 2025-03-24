@@ -137,10 +137,10 @@ POST:  https://f1wohl0jpd.execute-api.eu-north-1.amazonaws.com/auth/register
 **Exempel bodyjson:**
 ```
 POST: {
-    "username": "Johan",
-    "email": "johan@test.com",
-    "password": "12345678",
-    "confirmPassword": "12345678",
+    "username": "bogdan",
+    "email": "bogdan@test.com",
+    "password": "a3b3b3b3",
+    "confirmPassword": "a3b3b3b3",
     "country": "Sweden",
     "city": "Karlsklona"
 }
@@ -158,7 +158,8 @@ Om användarnamnet redan finns får vi fel 400 och svarar:
 	"error": "The username is already taken."
 }
 
-**OBS!**  Du kan registrera en administratör med den tilldelade e-postadressen konrad@example.com, i .env kan du lägga till administratörer: ADMIN_EMAILS=konrad@example.com, konrad2@example.com
+**OBS!** Lösenord måste vara 8 tecken långt, användarnamn måste vara minst 3 tecken långt, kan innehålla siffror, t.ex. jan123, det kan också vara e-post .
+Man kan registrera en administratör med den tilldelade e-postadressen konrad@example.com, i .env kan du lägga till administratörer: ADMIN_EMAILS=konrad@example.com, konrad2@example.com
 
 
 ## Inloggning
