@@ -264,7 +264,7 @@ Förfrågan måste inkludera en giltig autentiseringstoken i headers.
 **Svar:**
 Lyckad förfrågan (200 OK):
 Om token är giltig returneras användarens data:
-{
+```{
   "success": true,
   "data": {
     "username": "Adrian",
@@ -272,9 +272,12 @@ Om token är giltig returneras användarens data:
     "country": "Poland"
   }
 }
+```
 Ogiltig token (400 Bad Request):
 Om token är felaktig eller saknas returneras ett felmeddelande:
+```
 {
   "success": false,
   "error": "Invalid token or missing username"
 }
+```
