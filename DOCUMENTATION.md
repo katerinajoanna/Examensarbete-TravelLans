@@ -148,19 +148,21 @@ POST: {
 **Beskrivning:**
 Lägger till registreringsanvändare.
 Till exempel, om e-postmeddelandet upprepas får vi fel 400 och svarar:
+```
 {
 	"success": false,
 	"error": "This email is already registered."
 }
+```
 Om användarnamnet redan finns får vi fel 400 och svarar:
+```
 {
 	"success": false,
 	"error": "The username is already taken."
 }
-
+```
 **OBS!** Lösenord måste vara 8 tecken långt, användarnamn måste vara minst 3 tecken långt, kan innehålla siffror, t.ex. jan123, det kan också vara e-post .
 Man kan registrera en administratör med den tilldelade e-postadressen konrad@example.com, i .env kan du lägga till administratörer: ADMIN_EMAILS=konrad@example.com, konrad2@example.com
-
 
 ## Inloggning
 **Endpoint:**
@@ -176,11 +178,12 @@ POST: https://f1wohl0jpd.execute-api.eu-north-1.amazonaws.com/auth/login
 **Beskrivning:**
 Loggar in en befintlig användare.
 Om det inte finns får vi fel 400 och svar:
+```
  {
 	"success": false,
 	"error": "Invalid username or email"
 }
-
+```
 
 ## RefreshToken
 **Endpoint:**
