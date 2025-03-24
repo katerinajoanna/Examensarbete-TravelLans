@@ -8,9 +8,8 @@ Min idé är att skapa en webbaplatform som fungerar som en interaktiv reseguide
 - **Utforska kontinenter** – Välj en kontinent och upptäck spännande resmål med bilder och beskrivningar.
 - **Detaljerad platsinformation** – Se mer information om varje plats, inklusive länkar till ytterligare resurser.
 - **Sök efter kategori** – Filtrera platser efter kategori, t.ex. berg, grottor, nationalparker och vattenfall.
-- **Användargenererat innehåll** – Skapa inlägg på varje kontinent och läs andras bidrag.
 - **Lägg till favoriter** – Spara dina favoritplatser för snabb åtkomst senare.
-- **Lägg till nya destinationer** – Efter inloggning kan användare lägga till egna upptäckter med bilder, korta videor, beskrivningar och länkar.
+- **Lägg till inlägg** – Efter inloggning kan användare lägga till egna beskrivningar
 - **Användarkonton** – Registrera dig, logga in och hantera din profil.
 
 ### Adminfunktioner
