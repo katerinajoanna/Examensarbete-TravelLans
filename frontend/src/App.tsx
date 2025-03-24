@@ -8,6 +8,7 @@ import ContactPage from './pages/ContactPage';
 import LoginRegister from './pages/LoginRegister';
 import FavoritesPage from './pages/FavoritesPage';
 import SearchResultsPage from './pages/SearchResultsPage';
+import MapPage from './pages/MapPage';
 
 function App() {
   return (
@@ -19,8 +20,9 @@ function App() {
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/favorite" element={<FavoritesPage />} />
           <Route path="/continent/:continentName" element={<ContinentPage />} />
-          <Route path='/login' element={<LoginRegister />} />
+          <Route path="/login" element={<LoginRegister />} />
           <Route path="/places/:continentName/:category" element={<SearchResultsPage />} />
+          <Route path="/map" element={<MapPage />} />
         </Routes>
       </Router>
     </FavoritesProvider>
