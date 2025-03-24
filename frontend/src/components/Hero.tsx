@@ -4,7 +4,7 @@ import SearchHome from './SearchHome';
 const HeroSection: React.FC<HeroSectionProps> = ({ title, description }) => {
     return (
         <section className='relative flex-grow my-2'>
-            {/* Tło z wideo */}
+            {/* Bakgrund från video */}
             <video
                 className='absolute top-0 left-0 w-full h-full object-cover rounded-md shadow-imgShadow'
                 autoPlay
@@ -16,7 +16,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ title, description }) => {
                 Video not supported
             </video>
 
-            {/* Warstwa z tekstem na wideo */}
+            {/* Textlager på video */}
             <div className='relative z-10 flex flex-col items-center h-full gap-4 p-4 sm:gap-6 sm:p-8 lg:p-12'>
 
                 <h1 className='text-3xl font-extrabold sm:text-4xl md:text-5xl md:font-extrabold lg:text-6xl xl:text-7xl text-textSecondary text-center font-robotoFlex italic tracking-wide stroke-gallery p-2 mb-12 sm:-mt-4 md:mt-1 md:mb-24 animate-slideIn'>
