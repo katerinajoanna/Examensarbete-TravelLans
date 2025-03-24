@@ -2,7 +2,6 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import WriteForm from "../components/WriteForm";
 
-
 const ContactPage = () => {
     return (
         <div className="flex flex-col min-h-screen">

@@ -1,4 +1,3 @@
-
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 
@@ -43,4 +42,3 @@ const AboutPage = () => {
 };
 
 export default AboutPage;
-
