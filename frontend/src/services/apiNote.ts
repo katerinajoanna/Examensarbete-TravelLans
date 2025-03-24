@@ -18,7 +18,7 @@ export const addNoteToAPI = async (continent: string, noteText: string) => {
     try {
         const token = localStorage.getItem("accessToken");
 
-        console.log("🔹 Wysyłanie notatki do API:", { note: noteText, continent });
+        console.log("Wysyłanie notatki do API:", { note: noteText, continent });
 
         const response = await fetch("https://f1wohl0jpd.execute-api.eu-north-1.amazonaws.com/auth/note", {
             method: "POST",
@@ -31,7 +31,7 @@ export const addNoteToAPI = async (continent: string, noteText: string) => {
 
         const data = await response.json();
 
-        console.log("🔹 Odpowiedź API:", data);
+        console.log("Odpowiedź API:", data);
 
         if (!response.ok) {
             throw new Error(data.message || "Failed to add note.");
