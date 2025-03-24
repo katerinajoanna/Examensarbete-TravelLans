@@ -41,6 +41,8 @@ Projektet använder följande teknologier:
 ## API-dokumentation
 Se [DOCUMENTATION.md](DOCUMENTATION.md) för detaljer om API-endpoints.
 
+## Här är länk till min websida: [Klicka här](https://????????????)
+
 ## Kontakt
 Om du har några frågor, vänligen kontakta mig via e-post: **kasiapotar@gmail.com**.
 
