@@ -1,5 +1,6 @@
 ﻿# Examensarbete-TerraLens
 
+
 ## Välkommen till TerraLens!
 
 Min idé är att skapa en webbaplatform som fungerar som en interaktiv reseguide till världens mest fascinerande platser. Applikationen presenterar unika platser med bilder, beskrivningar och resenärers anteckningar. Syftets uppdrag är att inspirera människor att resa, upptäcka och dela sina erfarenheter, men också att möjliggöra virtuella resor för dem som inte kan besöka dessa platser personligen.
