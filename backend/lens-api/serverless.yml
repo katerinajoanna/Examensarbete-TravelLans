@@ -1,0 +1,209 @@
+org: studentkasia
+app: lens-api
+service: lens-api
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  region: eu-north-1
+  deploymentMethod: direct
+  iam:
+    role: arn:aws:iam::796973483684:role/LambdaDynamoDbRole
+  environment:
+    DYNAMODB_TABLE: TravelLensTable
+    DYNAMODB_USERS_TABLE: UsersTable
+    DYNAMODB_NOTES_TABLE: NotesTable
+    DYNAMODB_FAVORITES_TABLE: FavoritesTable
+    JWT_SECRET: ${env:JWT_SECRET}
+  httpApi:
+    cors: true
+
+plugins:
+  - serverless-offline
+  
+functions:
+  GetAllContinents:
+    handler: functions/GetAllContinents/index.getAllContinents
+    events:
+      - httpApi:
+          path: /continents
+          method: get
+
+  AddContinent:
+    handler: functions/AddContinent/index.addContinent
+    events:
+      - httpApi:
+          path: /continent
+          method: post
+
+  AddPlace:
+    handler: functions/AddPlace/index.addPlace
+    events:
+      - httpApi:
+          path: /place
+          method: post
+
+  GetContinent:
+    handler: functions/GetContinent/index.getContinent
+    events:
+      - httpApi:
+          path: /continent/{continent}
+          method: get
+
+  DeletePlace:
+    handler: functions/DeletePlace/index.deletePlace
+    events:
+      - httpApi:
+          path: /place/{continent}/{placeId}
+          method: delete
+
+  UpdatePlace:
+    handler: functions/UpdatePlace/index.updatePlace
+    events:
+      - httpApi:
+          path: /place/{continent}/{placeId}
+          method: put
+
+  UpdateContinent:
+    handler: functions/UpdateContinent/index.updateContinent
+    events:
+      - httpApi:
+          path: /continent/{continent}
+          method: put 
+
+  GetPlacesByCategoryAndContinent:
+    handler: functions/GetPlacesByCategoryAndContinent/index.getPlacesByCategoryAndContinent  
+    events:
+      - httpApi:
+          path: /places/{continent}/{category}
+          method: get
+
+  GetPlaceById:
+    handler: functions/GetPlaceById/index.getPlaceById
+    events:
+      - httpApi:
+          path: /place/{continent}/{placeId}
+          method: get
+
+  RegisterUser:
+    handler: functions/auth/Register/index.registerUser
+    events:
+      - httpApi:
+          path: /auth/register
+          method: post
+
+  LoginUser:
+    handler: functions/auth/Login/index.loginUser
+    events:
+      - httpApi:
+          path: /auth/login
+          method: post
+
+  GetUser:
+    handler: functions/auth/GetUser/index.getUser
+    events:
+      - httpApi:
+          path: /auth/user
+          method: get
+        
+  AddFavorite:
+    handler: functions/auth/Favorite/index.addFavorite
+    events:
+      - httpApi:
+          path: /auth/favorite
+          method: post
+
+  GetFavorites:
+    handler: functions/auth/GetFavorites/index.getFavorites
+    events:
+      - httpApi:
+          path: /auth/favorites/{userId} 
+          method: get
+        
+
+  AddNote:
+    handler: functions/auth/Notes/index.addNote
+    events:
+      - httpApi:
+          path: /auth/note
+          method: post
+
+  GetNotes:
+    handler: functions/auth/GetNotes/index.getNotes
+    events:
+      - httpApi:
+          path: /auth/notes/{continent}
+          method: get        
+
+  RefreshToken:
+    handler: functions/auth/RefreshToken/index.refreshToken
+    events:
+      - httpApi:
+          path: /auth/refresh
+          method: post
+
+resources:
+  Resources:
+    TravelLensTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: TravelLensTable
+        AttributeDefinitions:
+          - AttributeName: PK
+            AttributeType: S
+          - AttributeName: SK
+            AttributeType: S
+        KeySchema:
+          - AttributeName: PK
+            KeyType: HASH
+          - AttributeName: SK
+            KeyType: RANGE
+        BillingMode: PAY_PER_REQUEST
+
+    UsersTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: UsersTable
+        AttributeDefinitions:
+          - AttributeName: PK
+            AttributeType: S
+          - AttributeName: SK
+            AttributeType: S
+        KeySchema:
+          - AttributeName: PK
+            KeyType: HASH
+          - AttributeName: SK
+            KeyType: RANGE
+        BillingMode: PAY_PER_REQUEST
+
+    NotesTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: NotesTable
+        AttributeDefinitions:
+          - AttributeName: PK
+            AttributeType: S
+          - AttributeName: SK
+            AttributeType: S
+        KeySchema:
+          - AttributeName: PK
+            KeyType: HASH
+          - AttributeName: SK
+            KeyType: RANGE
+        BillingMode: PAY_PER_REQUEST
+
+    FavoritesTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: FavoritesTable
+        AttributeDefinitions:
+          - AttributeName: PK
+            AttributeType: S
+          - AttributeName: SK
+            AttributeType: S
+        KeySchema:
+          - AttributeName: PK
+            KeyType: HASH
+          - AttributeName: SK
+            KeyType: RANGE
+        BillingMode: PAY_PER_REQUEST        

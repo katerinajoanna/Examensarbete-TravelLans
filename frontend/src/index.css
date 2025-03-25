@@ -1,3 +1,65 @@
+@import "@fontsource/roboto-serif";
+@import "@fontsource/roboto-flex";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(90deg, #333E89 0%, #202756 50%, #171B3D 75%, #0D1023 100%);
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+@layer utilities {
+
+    /* Text med kantlinje för bättre läsbarhet */
+    .text-stroke {
+        color: rgba(240, 239, 232, 0.9);
+        text-shadow:
+            -1px -1px 0 #151514,
+            1px -1px 0 #151514,
+            -1px 1px 0 #151514,
+            1px 1px 0 #151514;
+    }
+
+    /* Kantlinje för galleritext */
+    .stroke-gallery {
+        color: #E5A000;
+        text-shadow:
+            -1px -1px 0 #343433,
+            1px -1px 0 #343433,
+            -1px 1px 0 #343433,
+            1px 1px 0 #343433;
+    }
+}
+
+/* stilar för autofyll */
+@layer base {
+
+    input.search-input:-webkit-autofill,
+    input.search-input:-webkit-autofill:hover,
+    input.search-input:-webkit-autofill:focus,
+    input.search-input:-webkit-autofill:active {
+        background-color: transparent !important;
+        color: #cfcfcf !important;
+        -webkit-box-shadow: 0 0 0px 1000px rgba(24, 26, 30, 0.2) inset !important;
+        transition: background-color 5000s ease-in-out 0s, color 5000s ease-in-out 0s !important;
+        caret-color: #cfcfcf !important;
+    }
+
+    input.login-input:-webkit-autofill {
+        background-color: white !important;
+        color: black !important;
+        -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+    }
+}
