@@ -46,3 +46,7 @@ Se [DOCUMENTATION.md](DOCUMENTATION.md) för detaljer om API-endpoints.
 ## Kontakt
 Om du har några frågor, vänligen kontakta mig via e-post: **kasiapotar@gmail.com**.
 
+## Övrigt
+
+### Känt problem: Dubletter vid anteckningar  
+Det finns ett känt problem med anteckningsfunktionen där en anteckning ibland skapas som en dubbellpost. Den ena posten är tom, medan den andra innehåller texten. Detta påverkar inte applikationens grundläggande funktionalitet, men kan förbättras i framtida versioner. " Om detta inträffar kan användaren radera den tomma posten manuellt."
