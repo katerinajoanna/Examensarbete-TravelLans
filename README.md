@@ -50,4 +50,5 @@ Om du har några frågor, vänligen kontakta mig via e-post: **kasiapotar@gmail.
 ## Övrigt
 
 ### Känt problem: Dubletter vid anteckningar  
-Det finns ett känt problem med anteckningsfunktionen där en anteckning ibland skapas som en dubbellpost. Den ena posten är tom, medan den andra innehåller texten. Detta påverkar inte applikationens grundläggande funktionalitet, men kan förbättras i framtida versioner. " Om detta inträffar kan användaren radera den tomma posten manuellt."
+1. Det finns ett känt problem med anteckningsfunktionen där en anteckning ibland skapas som en dubbellpost. Den ena posten är tom, medan den andra innehåller texten. Detta påverkar inte applikationens grundläggande funktionalitet, men kan förbättras i framtida versioner. " Om detta inträffar kan användaren radera den tomma posten manuellt."
+2. Markörerna i Map sidan renderas tyvärr inte efter build, men en lösning kommer senare.
