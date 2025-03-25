@@ -41,7 +41,7 @@ Projektet använder följande teknologier:
 ## API-dokumentation
 Se [DOCUMENTATION.md](DOCUMENTATION.md) för detaljer om API-endpoints.
 
-## Här är länk till min websida: [Klicka här](https://????????????)
+## Här är länk till min websida: [Klicka här](http://myapptrawel.s3-website.eu-north-1.amazonaws.com)
 
 ## Kontakt
 Om du har några frågor, vänligen kontakta mig via e-post: **kasiapotar@gmail.com**.
